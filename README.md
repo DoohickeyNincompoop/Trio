@@ -1,5 +1,6 @@
-# -Trio-
-"three" member group
+# "Trio"
+"Three" member group
+Clarence Cheng and Kevin Lin
 # To Do
 - Add addFirst(Card e)
 - Add removeFirst()
