@@ -10,7 +10,7 @@ Clarence Cheng and Kevin Lin
 - Add peekLast()
 # Explanations
 We chose to implement the adding, removing, and peeking methods for both ends of
-the array because those methods are similar to the methods we have created for
+the array, and the size and isEmpty methods, because those methods are similar to the methods we have created for
 other types of queues.
 We are choosing to use a node-based architecture because the only parts of the
 list we need access to are the front and the end. There will be no need to copy

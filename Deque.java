@@ -1,5 +1,5 @@
 public interface Deque<Card> {
-    
+
     public void addFirst(Card e);
 
     public Card removeFirst();
@@ -11,4 +11,8 @@ public interface Deque<Card> {
     public Card removeLast();
 
     public Card peekLast();
+
+    public boolean isEmpty();
+
+    public int size();
 }
