@@ -1,9 +1,9 @@
 # -Trio-
 "three" member group
 # To Do
-- Add addFirst()
+- Add addFirst(Card e)
 - Add removeFirst()
 - Add peekFirst()
-- Add addLast()
+- Add addLast(Card e)
 - Add removeLast()
 - Add peekLast()
