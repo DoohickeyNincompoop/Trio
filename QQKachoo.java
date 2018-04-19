@@ -40,26 +40,28 @@ public class QQKachoo<D> implements Deque<D> {
   public D peekFirst() {return _front.getCargo();}
 
   public void addLast(D element) {
-      _end.setNext(element);
-      _end = element;
+      DLLNode<D> input = new DLLNode<D>(element,_end,null);
+      _end.setNext(input);
+      _end = input;
   }
 
   public D removeLast() {
-      D temp = _front;
+      if (_size == 0) return null;
+      D temp = _end.getCargo();
       if (_size == 1){
 	  _front = null;
-	  _end == null;
+	  _end = null;
       }
       else{
-	  for (int pow = 2; pow < size; pow++){
-	      temp = temp.getNext();
-	  }
-	  _end = temp;
+	  _end = _end.getPrev();
 	  _end.setNext(null);
+      }
+      _size--;
+      return temp;
   }
 
   public D peekLast() {
-      return _end;
+      return _end.getCargo();
   }
 
   public boolean isEmpty() {return _size == 0;}
