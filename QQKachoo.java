@@ -1,6 +1,6 @@
 public class QQKachoo<D> implements Deque<D> {
 
-  private DLLNode<D> _front, _end;
+    private DLLNode<D> _front, _end;
   private int _size;
 
   public QQKachoo() {
@@ -39,13 +39,31 @@ public class QQKachoo<D> implements Deque<D> {
 
   public D peekFirst() {return _front.getCargo();}
 
-  public void addLast(D element) {return;}
+  public void addLast(D element) {
+      _end.setNext(element);
+      _end = element;
+  }
 
-  public D removeLast() {return null;}
+  public D removeLast() {
+      D temp = _front;
+      if (_size == 1){
+	  _front = null;
+	  _end == null;
+      }
+      else{
+	  for (int pow = 2; pow < size; pow++){
+	      temp = temp.getNext();
+	  }
+	  _end = temp;
+	  _end.setNext(null);
+  }
 
-  public D peekLast() {return null;}
+  public D peekLast() {
+      return _end;
+  }
 
   public boolean isEmpty() {return _size == 0;}
 
   public int size() {return _size;}
 }
+
