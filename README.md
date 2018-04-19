@@ -2,12 +2,7 @@
 "Three" member group
 Clarence Cheng and Kevin Lin
 # To Do
-- Add addFirst(Card e)
-- Add removeFirst()
-- Add peekFirst()
-- Add addLast(Card e)
-- Add removeLast()
-- Add peekLast()
+- Testing
 # Explanations
 We chose to implement the adding, removing, and peeking methods for both ends of
 the array, and the size and isEmpty methods, because those methods are similar to the methods we have created for
