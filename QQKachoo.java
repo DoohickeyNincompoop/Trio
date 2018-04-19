@@ -41,8 +41,15 @@ public class QQKachoo<D> implements Deque<D> {
 
   public void addLast(D element) {
       DLLNode<D> input = new DLLNode<D>(element,_end,null);
-      _end.setNext(input);
-      _end = input;
+      if (isEmpty()) {
+	  _front = input;
+	  _end = input;
+      }
+      else {
+	  _end.setNext(input);
+	  _end = input;
+      }
+      _size++;
   }
 
   public D removeLast() {
