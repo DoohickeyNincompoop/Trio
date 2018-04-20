@@ -74,5 +74,32 @@ public class QQKachoo<D> implements Deque<D> {
   public boolean isEmpty() {return _size == 0;}
 
   public int size() {return _size;}
+	
+  public static void main(String[] args){
+	  
+	QQKachoo<String> pow = new QQKachoo<String>();
+	  pow.addFirst("one");
+	  pow.addFirst("two");
+	  pow.addFirst("three");
+	  
+	  pow.peekFirst();
+	  
+	  pow.removeFirst();
+	  
+	  pow.peekFirst();
+	  
+	  pow.peekLast();
+	  
+	  pow.removeLast();
+	  
+	  pow.peekFirst();
+	  pow.peekLast();
+	  
+	  pow.size();
+	  
+	  pow.isEmpty();
+	  
+	  }
+		      
 }
 
